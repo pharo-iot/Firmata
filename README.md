@@ -55,7 +55,7 @@ Digital pins work either in read or write mode. In other words, we can use them 
 
 ### Writing to Digital Pins
 
-To write to a digital pin, you should first set it to output mode using the `#digitalPin:mode:` message. The first argument of the message is the number of the pin, and the second is a numeric value representing the mode we want. We use the `FirmataConstants` class that encapsulates many of the different numeric values used by firmata. In the following example, we set the digital pin 13 in output mode, so we can write to it.
+To write to a digital pin, you should first set it to output mode using the `#digitalPin:mode:` message. The first argument of the message is the number of the pin, and the second is a numeric value representing the output mode value. We use the `FirmataConstants` class that encapsulates many of the different numeric values used by firmata. In the following example, we set the digital pin 13 in output mode, so we can write to it.
 
 ```smalltalk
 firmata digitalPin: 13 mode: FirmataConstants pinModeOutput.
@@ -72,3 +72,26 @@ And to turn it off:
 ```smalltalk
 firmata digitalWrite: 13 value: 0.
 ```
+
+### Reading from Digital Pins
+
+To read from a digital pin, you should first set it to input mode using the `#digitalPin:mode:` message. The first argument of the message is the number of the pin, and the second is a numeric value representing the input mode value. We use the `FirmataConstants` class that encapsulates many of the different numeric values used by firmata.
+
+In the following example, we first setup a push down button with a pull-down resistor.
+We connect the button output to digital pin 2.
+When we push the button and Firmata should tell us that the value of pin 2 is 1. When we do not push it, its value should be 0.
+
+[Pull-down Resistor Button Sketch](https://www.arduino.cc/en/uploads/Tutorial/button.png)
+
+First, we set the digital pin 2 in input mode, so we can read from it.
+
+```smalltalk
+firmata digitalPin: 2 mode: FirmataConstants pinModeInput.
+```
+
+Then, we can read the value of the pin using the `#digitalRead:` message.
+
+```smalltalk
+firmata digitalRead: 2.
+```
+If we ask the value and press the button at the same time, we get the value 1.
