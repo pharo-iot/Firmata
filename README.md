@@ -14,9 +14,9 @@ To load latest version of Firmata, you can evaluate the following expression in 
 
 ```smalltalk
 Gofer it
-	smalltalkhubUser: 'Guille' project: 'Firmata';
-	package: 'Firmata';
-	load.
+    smalltalkhubUser: 'Guille' project: 'Firmata';
+    package: 'Firmata';
+    load.
 ```
 
 ## Connecting to your device
