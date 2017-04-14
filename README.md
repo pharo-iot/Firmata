@@ -34,5 +34,18 @@ firmata := Firmata onPort: '/dev/ttyACM0' baudRate: 57600.
 
 Connecting to an arduino will check that the port exists, and will verify that Arduino has installed a compatible version of Firmata. In case one of these conditions does not hold, an exception is thrown.
 
+Once we are connected, we can ask the Firmata driver if it is connected or not.
+
+```smalltalk
+firmata isConnected.
+   => true
+```
+
+And finally, we can disconnect it by doing:
+
+```smalltalk
+firmata disconnect.
+```
+
 ## Writing to Digital Pins
 
