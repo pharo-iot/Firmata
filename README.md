@@ -81,7 +81,7 @@ In the following example, we first setup a push down button with a pull-down res
 We connect the button output to digital pin 2.
 When we push the button and Firmata should tell us that the value of pin 2 is 1. When we do not push it, its value should be 0.
 
-[Pull-down Resistor Button Sketch](https://www.arduino.cc/en/uploads/Tutorial/button.png)
+![Pull-down Resistor Button Sketch](https://www.arduino.cc/en/uploads/Tutorial/button.png)
 
 First, we set the digital pin 2 in input mode, so we can read from it.
 
