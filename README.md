@@ -47,5 +47,28 @@ And finally, we can disconnect it by doing:
 firmata disconnect.
 ```
 
-## Writing to Digital Pins
+## Digital Pins
 
+Digital pins are pins whose state is either **on** or **off**. These states are represented by the binary values 1 and 0.
+
+Digital pins work either in read or write mode. In other words, we can use them to obtain a digital value (for example, if a button is pressed or not), or to set a value (set if a led is turned on or off) but not both at the same time.
+
+### Writing to Digital Pins
+
+To write to a digital pin, you should first set it to output mode using the `#digitalPin:mode:` message. The first argument of the message is the number of the pin, and the second is a numeric value representing the mode we want. We use the `FirmataConstants` class that encapsulates many of the different numeric values used by firmata. In the following example, we set the digital pin 13 in output mode, so we can write to it.
+
+```smalltalk
+firmata digitalPin: 13 mode: FirmataConstants pinModeOutput.
+```
+
+We can then write to a digital port with the `#digitalWrite:value:` message, giving the pin number as first argument, and the value to write (0 or 1) as second argument. Thus, to turn on the pin 13 we can do:
+
+```smalltalk
+firmata digitalWrite: 13 value: 1.
+```
+
+And to turn it off:
+
+```smalltalk
+firmata digitalWrite: 13 value: 0.
+```
