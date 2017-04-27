@@ -95,3 +95,21 @@ Then, we can read the value of the pin using the `#digitalRead:` message.
 firmata digitalRead: 2.
 ```
 If we ask the value and press the button at the same time, we get the value 1.
+
+## Analog Pins
+
+Analog pins are pins whose state range in the continuum between 0 and 1. These states are represented as floating point numbers.
+
+As with digital pins, analog pins work both in read and write mode. Typical usages of reading analog pins is retrieving data from sensors, such as temperature, humidity, light and so on. Writing analog pins can be used to, for example, turn on leds with a given intensity instead of just "turning on" like we do with the digital pins.
+
+### Activating Analog Pins
+
+```smalltalk
+firmata activateAnalogPin: 0.
+```
+
+### Reading from Analog Pins
+
+```smalltalk
+((firmata analogRead: 0) * 500 / 1024) asFloat.
+```
