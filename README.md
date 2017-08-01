@@ -13,10 +13,10 @@ As soon as Iceberg (the pharo-git library) is ready for the latest release and 6
 To load latest version of Firmata, you can evaluate the following expression in your playground:
 
 ```smalltalk
-Gofer it
-    smalltalkhubUser: 'Guille' project: 'Firmata';
-    package: 'Firmata';
-    load.
+Metacello new
+  baseline: 'Firmata';
+  repository: 'github://pharo-iot/Firmata';
+  load
 ```
 
 ## Connecting to your device
