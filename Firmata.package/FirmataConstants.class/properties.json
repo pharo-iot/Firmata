@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "Richo 9/15/2009 12:00",
+	"super" : "Object",
+	"category" : "Firmata",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "FirmataConstants",
+	"type" : "normal"
+}

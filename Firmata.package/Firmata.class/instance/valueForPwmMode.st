@@ -1,0 +1,3 @@
+pin modes
+valueForPwmMode
+^FirmataConstants pinModePwm

@@ -1,0 +1,1 @@
+See class side. I collect a bunch of constants for the Firmata protocol.

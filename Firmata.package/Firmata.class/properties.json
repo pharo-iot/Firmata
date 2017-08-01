@@ -1,0 +1,25 @@
+{
+	"commentStamp" : "GuillermoPolito 3/29/2017 15:53",
+	"super" : "Object",
+	"category" : "Firmata",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"port",
+		"analogInputData",
+		"digitalInputData",
+		"digitalOutputData",
+		"parsingSysex",
+		"storedInputData",
+		"sysexBytesRead",
+		"waitForData",
+		"executeMultiByteCommand",
+		"multiByteChannel",
+		"majorVersion",
+		"minorVersion",
+		"steppingProcess"
+	],
+	"name" : "Firmata",
+	"type" : "normal"
+}
