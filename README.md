@@ -4,13 +4,7 @@ Firmata implementation for the Pharo Programming Language.
 
 ## Installation
 
-The code of the library is so far hosted in Smalltalkhub, in the following url:
-
-http://smalltalkhub.com/#!/~Guille/Firmata
-
-As soon as Iceberg (the pharo-git library) is ready for the latest release and 64 bits, the code will be moved to this repository.
-
-To load latest version of Firmata, you can evaluate the following expression in your playground:
+To load latest version of Firmata you can evaluate the following expression in playground:
 
 ```smalltalk
 Metacello new
