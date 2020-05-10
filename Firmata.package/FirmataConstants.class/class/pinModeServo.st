@@ -1,4 +1,3 @@
 pin modes
-pinModeServo 
-"digital pin in Servo output mode"
-^4
+pinModeServo
+	^16r04
