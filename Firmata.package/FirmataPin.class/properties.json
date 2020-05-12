@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Firmata",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"value",
+		"maxValue",
+		"axTimestamp",
+		"minValue",
+		"minTimestamp",
+		"capabilities"
+	],
+	"name" : "FirmataPin",
+	"type" : "normal"
+}

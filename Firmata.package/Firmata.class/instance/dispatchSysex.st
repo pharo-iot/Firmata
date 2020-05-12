@@ -1,10 +1,10 @@
-other commands
+sysex processing
 dispatchSysex
 	" at this point we have a sysex message in storedInputData"
 	| sysexCommand |
 	sysexCommand := storedInputData first.
 	(sysexCommand = FirmataConstants analogMappingResponse) ifTrue: [ ^self processAnalogMapping ].
-	(sysexCommand = FirmataConstants ) ifTrue: [ ^self process ].
-	(sysexCommand = FirmataConstants ) ifTrue: [ ^self process ].
-	(sysexCommand = FirmataConstants ) ifTrue: [ ^self process ].
-	(sysexCommand = FirmataConstants ) ifTrue: [ ^self process ].
+	(sysexCommand = FirmataConstants capabilityResponse ) ifTrue: [ ^self processCapability ].
+	(sysexCommand = FirmataConstants reportFirmware  ) ifTrue: [ ^self processFirmware ].
+	(sysexCommand = FirmataConstants pinStateResponse ) ifTrue: [ ^self processPinState ].
+	(sysexCommand = FirmataConstants stringData) ifTrue: [ ^self processStringData ].

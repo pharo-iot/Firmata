@@ -1,4 +1,4 @@
-receiving
+sysex processing
 parseSysex: inputByte 
 	inputByte = FirmataConstants endSysex
 		ifTrue: [parsingSysex := false. self dispatchSysex]

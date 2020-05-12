@@ -18,7 +18,8 @@
 		"multiByteChannel",
 		"majorVersion",
 		"minorVersion",
-		"steppingProcess"
+		"steppingProcess",
+		"allPins"
 	],
 	"name" : "Firmata",
 	"type" : "normal"
