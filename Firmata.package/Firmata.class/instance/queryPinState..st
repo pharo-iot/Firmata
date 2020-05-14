@@ -1,5 +1,5 @@
 other commands
-pinStateQuery: pinNumber
+queryPinState: pinNumber
 	"query the pin state for pin 0-127"
 	|packet |
 	packet := ByteArray with: FirmataConstants startSysex 

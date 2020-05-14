@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "RobvanLopik 5/13/2020 17:10",
 	"super" : "Object",
 	"category" : "Firmata",
 	"classinstvars" : [ ],
@@ -7,11 +7,14 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"value",
+		"mode",
+		"state",
 		"maxValue",
-		"axTimestamp",
+		"maxTimestamp",
 		"minValue",
 		"minTimestamp",
-		"capabilities"
+		"capabilities",
+		"analogPinNumber"
 	],
 	"name" : "FirmataPin",
 	"type" : "normal"
