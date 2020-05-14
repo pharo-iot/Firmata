@@ -1,7 +1,8 @@
 sysex processing
 processStringData
-	"comment stating purpose of instance-side message"
-	"scope: class-variables  &  instance-variables"	
+	" what to do with received string data? For now provide a popup	
+		I should strip the null bytes from the string!!"
 			
-	| temporary variable names |
-	
+	| text |
+	text := (storedInputData copyFrom: 2 to: sysexBytesRead) asString .
+	UIManager default alert: text

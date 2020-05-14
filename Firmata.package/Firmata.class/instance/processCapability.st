@@ -11,7 +11,7 @@ processCapability
 		length := eachPin size.
 		(length > 0) ifTrue:
 			[ 
-				1 to: (length - 2) by: 2 do: [ :i |  
+				1 to: length by: 2 do: [ :i |  
 					pin addCapability: (FirmataPinCapability mode: (eachPin at: i) 
 								resolution: (eachPin at: (i + 1)))]
 				 ].
