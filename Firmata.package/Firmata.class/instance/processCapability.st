@@ -2,9 +2,10 @@ sysex processing
 processCapability
 	"fill allPins with the results of the capability querys"	
 			
-	| pindata |
-	storedInputData at: 1 put: 127. " replace the sysex command"
-	pindata := storedInputData splitOn: 127.
+	| pindata response|
+	response := storedInputData copyFrom: 2 to: sysexBytesRead.
+	pindata := response splitOn: 127.
+	pindata removeLast.
 	pindata do: [ :eachPin | | pin length|
 		pin := FirmataPin new.
 		length := eachPin size.
