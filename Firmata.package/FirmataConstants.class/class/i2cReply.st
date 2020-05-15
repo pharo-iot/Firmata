@@ -1,3 +1,3 @@
 sysex processing
-i2cConfig
-	^16r78
+i2cReply
+	^16r77
