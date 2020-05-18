@@ -5,4 +5,4 @@ processStringData
 			
 	| text |
 	text := (storedInputData copyFrom: 2 to: sysexBytesRead) asString .
-	UIManager default alert: text
+	UIManager default alert: text title: 'Firmata'
