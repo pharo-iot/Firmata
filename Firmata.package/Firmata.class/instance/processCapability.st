@@ -3,6 +3,7 @@ processCapability
 	"fill allPins with the results of the capability querys"	
 			
 	| pindata response|
+	(allPins size ~= 0) ifTrue: [ ^nil ]. "We might lso update allPins, but usally boards don't change"
 	response := storedInputData copyFrom: 2 to: sysexBytesRead.
 	pindata := response splitOn: 127.
 	pindata removeLast.

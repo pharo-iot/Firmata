@@ -19,7 +19,8 @@
 		"majorVersion",
 		"minorVersion",
 		"steppingProcess",
-		"allPins"
+		"allPins",
+		"pinMap"
 	],
 	"name" : "Firmata",
 	"type" : "normal"

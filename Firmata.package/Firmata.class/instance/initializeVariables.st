@@ -6,4 +6,5 @@ initializeVariables
 	storedInputData := Array new: (FirmataConstants maxDataBytes) * 4 withAll: 0.
 	allPins := OrderedCollection new.
 	parsingSysex := false.
-	sysexBytesRead := waitForData := executeMultiByteCommand := multiByteChannel := majorVersion := minorVersion := 0
+	sysexBytesRead := waitForData := executeMultiByteCommand := multiByteChannel := majorVersion := minorVersion := 0.
+	pinMap := Dictionary new.
