@@ -1,6 +1,6 @@
 utilities
 to7Bits: aByteArray
-	"return a BateArray with 2 seven bitscharacters fro each bye"	
+	"return a ByteArray with 2 seven bitscharacters for each byte"	
 			
 	| buffer |
 	buffer := OrderedCollection new .
