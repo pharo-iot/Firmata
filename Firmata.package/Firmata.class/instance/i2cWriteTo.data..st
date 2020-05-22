@@ -6,11 +6,9 @@ i2cWriteTo: anI2CAddress data: bytes
 	| buffer request |
 	buffer := self to7Bits: bytes.
 	request := ByteArray
-		with: FirmataConstants startSysex
 		with: FirmataConstants i2cRequest
 		with: (anI2CAddress bitAnd: 16r7F)
 		with: 0.
 	self port
-		nextPutAll: request;
-		nextPutAll: buffer;
+		nextPutAll: request , buffer;
 		nextPutAll: FirmataConstants endSysex asByteArray

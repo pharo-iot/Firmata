@@ -20,7 +20,8 @@
 		"minorVersion",
 		"steppingProcess",
 		"allPins",
-		"pinMap"
+		"pinMap",
+		"i2cData"
 	],
 	"name" : "Firmata",
 	"type" : "normal"
