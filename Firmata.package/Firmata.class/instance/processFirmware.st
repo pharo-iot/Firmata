@@ -4,3 +4,4 @@ processFirmware
 	"scope: class-variables  &  instance-variables"	
 			
 	| temporary variable names |
+	self processStringData 

@@ -1,19 +1,8 @@
 stepper
-stepperStep: stepperNo steps: number speed: speed
-	" number of steps maximum2,097,151"	
-	| request1 request2 |
-	request1 := ByteArray with: FirmataConstants stepperCommand 
-								with: 1  "step"
-								with: stepperNo.
-	request2 := ByteArray with: (number bitAnd: 16r7F)
-								with: ((number bitShift: -7) bitAnd: 16r7F)
-								with: ((number bitShift: -14) bitAnd: 16r7F)
-								with: (speed bitAnd: 16r7F)
-								with: ((speed bitShift: -7) bitAnd: 16r7F).
-	self startSysex .
-	self port nextPutAll: request1;
-				nextPutAll: request2.
-	
-self endSysex 
-								
+stepperStep: stepperNo steps: aNumber speed: speed
+	" number of steps maximum2,097,151, negative is CCW"	
+	| sign |
+	sign := 0.
+	(aNumber < 0 ) ifTrue: [ sign := 1 ].
+	self stepperStep: stepperNo direction: sign steps: aNumber abs speed: speed
 	
