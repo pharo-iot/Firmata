@@ -21,7 +21,8 @@
 		"steppingProcess",
 		"allPins",
 		"pinMap",
-		"i2cData"
+		"i2cData",
+		"encoderData"
 	],
 	"name" : "Firmata",
 	"type" : "normal"
