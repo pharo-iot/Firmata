@@ -9,4 +9,5 @@ attachEncoder: number pinA: pinNumber1 pinB: pinNumber2
 								with: pinNumber1
 								with: pinNumber2.
 								
-	self fullSysex: request
+	self fullSysex: request.
+	encoderData at: number put: 0.

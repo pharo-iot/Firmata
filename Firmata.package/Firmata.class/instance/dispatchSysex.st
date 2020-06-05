@@ -9,3 +9,4 @@ dispatchSysex
 	(sysexCommand = FirmataConstants pinStateResponse ) ifTrue: [ ^self processPinState ].
 	(sysexCommand = FirmataConstants stringData) ifTrue: [ ^self processStringData ].
 	(sysexCommand = FirmataConstants i2cReply) ifTrue: [ ^self processI2CData ].
+	(sysexCommand = FirmataConstants encoderData) ifTrue: [ ^self processEncoderData ].
