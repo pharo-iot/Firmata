@@ -7,6 +7,6 @@ initializeVariables
 	allPins := OrderedCollection new.
 	parsingSysex := false.
 	sysexBytesRead := waitForData := executeMultiByteCommand := multiByteChannel := majorVersion := minorVersion := 0.
-	pinMap := Dictionary new.  "With analog pin number ass key"
+	pinMap := Dictionary new.  "With analog pin number as key"
 	i2cData := Dictionary new.  "with i2c address as key and a bytearray as data"
 	encoderData := Dictionary new. "encoder number as key"

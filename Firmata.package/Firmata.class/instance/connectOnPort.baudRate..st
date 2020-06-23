@@ -13,4 +13,5 @@ connectOnPort: portName baudRate: aNumber
 	self isConnected ifTrue: [
 		self
 			startSteppingProcess;
-			controlFirmataInstallation ]
+			controlFirmataInstallation;
+			setupPins ]
