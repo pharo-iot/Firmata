@@ -8,7 +8,7 @@ setupPins
 	delay := 50.
 	retries := 0.
 	[ delay milliSeconds wait. retries := retries + 1. (retries > 10) or: self maxPins ~= 0] whileFalse .
-	(self maxPins = 0) ifTrue: [ self error: 'capability query filed' ].
+	(self maxPins = 0) ifTrue: [ self error: 'capability query failed' ].
 	
 	self queryAnalogMapping.
 	retries := 0.
