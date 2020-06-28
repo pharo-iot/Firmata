@@ -23,7 +23,8 @@
 		"pinMap",
 		"i2cData",
 		"encoderData",
-		"dataGuard"
+		"dataGuard",
+		"announcer"
 	],
 	"name" : "Firmata",
 	"type" : "normal"

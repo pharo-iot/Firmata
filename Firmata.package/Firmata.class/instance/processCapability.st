@@ -12,6 +12,7 @@ processCapability
 		pin := FirmataPin new.
 		pin id: pinNr.
 		pinNr := pinNr + 1.
+		pin pinValue: 0.
 		length := eachPin size.
 		(length > 0) ifTrue:
 			[ 
