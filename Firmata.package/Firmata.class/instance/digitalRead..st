@@ -6,4 +6,4 @@ digitalRead: pinNumber
 		bitShift: (pinNumber bitAnd: 7) * -1)
 		bitAnd: 1"
 		
-	^(allPins at: (pinNumber + 1)) pinValue
+	dataGuard critical: [^(allPins at: (pinNumber + 1)) pinValue]
