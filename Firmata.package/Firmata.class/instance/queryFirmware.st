@@ -1,5 +1,5 @@
 other commands
 queryFirmware
 "Send a Firmware Name and Version query"
-self startSysex.
-self port  nextPutAll: (ByteArray with: FirmataConstants reportFirmware with: FirmataConstants endSysex).
+
+self port  nextPutAll: (ByteArray with: FirmataConstants startSysex with: FirmataConstants reportFirmware with: FirmataConstants endSysex).

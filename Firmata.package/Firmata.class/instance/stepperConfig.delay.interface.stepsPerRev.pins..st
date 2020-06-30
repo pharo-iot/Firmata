@@ -6,16 +6,17 @@ stepperConfig: devnumber delay: museconds interface: code stepsPerRev: number pi
 	stepsPerRev(olution)
 	pins: a ByeArray of 2 or 4 pin numbers (0-127)"
 	| request |
-	request := ByteArray 	with: FirmataConstants stepperCommand
-								with: 0  "config subcommand"
-								with: devnumber
-								with: ((museconds bitShift: -3) bitOr: code)
-								with: (number bitAnd: 16r7F)
-								with: ((number bitShift: -7) bitAnd: 16r7F).
-	self startSysex.
-	self port nextPutAll: request.
-	self port nextPutAll: aByteArray.
-	self endSysex 
+	request := ByteArray new: 6.
+	request
+		at: 1 put: FirmataConstants startSysex;
+		at: 2 put: FirmataConstants stepperCommand;
+		at: 3 put: 0;  "config subcommand"
+		at: 4 put: devnumber;
+		at: 5 put: ((museconds bitShift: -3) bitOr: code);
+		at: 6 put: (number bitAnd: 16r7F);
+		at: 7 put: ((number bitShift: -7) bitAnd: 16r7F).
+	request := request, aByteArray, ((FirmataConstants endSysex) asByteArray).
+	self port nextPutAll: request
 								
 								
 								
