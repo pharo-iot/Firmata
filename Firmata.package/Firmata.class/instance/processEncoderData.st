@@ -4,7 +4,7 @@ processEncoderData
 	| encoderNumber sign value totalNumber signBit|
 	totalNumber := (sysexBytesRead - 1) / 5.
 	1 to: totalNumber do: [ :i |
-		encoderNumber := (storedInputData at: (5 * i - 3)) bitAnd: 2r100.
+		encoderNumber := (storedInputData at: (5 * i - 3)) bitAnd: 2r00111111.
 		signBit := (storedInputData at: (5 * i - 3)) bitAnd: 2r01000000.
 		sign := -1.
 		(signBit = 0) ifTrue: [ sign := 1].
