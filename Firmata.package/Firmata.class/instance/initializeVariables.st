@@ -14,10 +14,10 @@ initializeVariables
 	announcer := Announcer new.
 	dispatchDict := { 
 			(FirmataConstants analogMappingResponse -> #processAnalogMapping:) .
-			(FirmataConstants capabilityResponse -> #processCapabililty:).
+			(FirmataConstants capabilityResponse -> #processCapability:).
 			(FirmataConstants reportFirmware -> #processFirmware: ).
 			(FirmataConstants pinStateResponse -> #processPinState: ).
 			(FirmataConstants stringData -> #processStringData: ).
 			(FirmataConstants i2cReply -> #processI2CData: ).
-			(FirmataConstants encoderData -> #processEncoderData)
+			(FirmataConstants encoderData -> #processEncoderData:)
 			 } asDictionary 

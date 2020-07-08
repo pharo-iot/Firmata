@@ -10,6 +10,6 @@ dispatchSysex
 	(sysexCommand = FirmataConstants stringData) ifTrue: [ ^self processStringData ].
 	(sysexCommand = FirmataConstants i2cReply) ifTrue: [ ^self processI2CData ].
 	(sysexCommand = FirmataConstants encoderData) ifTrue: [ ^self processEncoderData ]."
-	data := storedInputData copyFrom: 2.
+	data := storedInputData copyFrom: 2 to: sysexBytesRead.
 	action := dispatchDict at: sysexCommand ifAbsent: [ self error: 'nknown sysex command ' , sysexCommand hex].
 	self perform: action with: data.
