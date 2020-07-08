@@ -24,7 +24,10 @@
 		"i2cData",
 		"encoderData",
 		"dataGuard",
-		"announcer"
+		"announcer",
+		"firmwareName",
+		"stringData",
+		"dispatchDict"
 	],
 	"name" : "Firmata",
 	"type" : "normal"

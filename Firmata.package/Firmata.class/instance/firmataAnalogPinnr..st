@@ -1,6 +1,6 @@
 as yet unclassified
-firmataPinnr: anArduinoPinNumber
+firmataAnalogPinnr: anAnalogPinNumber
 	"creturn the FirmataPin with the corresponding arduino pin number
 	should this not be a copy??"	
 			
-	^(allPins at: (anArduinoPinNumber + 1)) copy
+	^(allPins at: ((pinMap at: anAnalogPinNumber)  + 1)) copy

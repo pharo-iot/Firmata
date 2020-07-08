@@ -1,4 +1,4 @@
-i2c
+sysex processing
 processI2CData
 	| buffer address|
 	address := (storedInputData at: 2) + ((storedInputData at: 3) bitShift: -7).

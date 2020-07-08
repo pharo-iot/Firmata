@@ -1,0 +1,3 @@
+other commands
+firmwareName
+	^firmwareName 

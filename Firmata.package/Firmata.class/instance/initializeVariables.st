@@ -12,3 +12,12 @@ initializeVariables
 	encoderData := Dictionary new. "encoder number as key"
 	dataGuard := Mutex new.
 	announcer := Announcer new.
+	dispatchDict := { 
+			(FirmataConstants analogMappingResponse -> #processAnalogMapping:) .
+			(FirmataConstants capabilityResponse -> #processCapabililty:).
+			(FirmataConstants reportFirmware -> #processFirmware: ).
+			(FirmataConstants pinStateResponse -> #processPinState: ).
+			(FirmataConstants stringData -> #processStringData: ).
+			(FirmataConstants i2cReply -> #processI2CData: ).
+			(FirmataConstants encoderData -> #processEncoderData)
+			 } asDictionary 
