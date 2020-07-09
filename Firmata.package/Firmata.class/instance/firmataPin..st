@@ -1,5 +1,5 @@
 as yet unclassified
-firmataPinnr: anArduinoPinNumber
+firmataPin: anArduinoPinNumber
 	"creturn the FirmataPin with the corresponding arduino pin number
 	should this not be a copy??"	
 			
