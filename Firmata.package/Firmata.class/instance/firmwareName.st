@@ -1,3 +1,3 @@
 other commands
 firmwareName
-	^firmwareName 
+	^firmwareName asString
