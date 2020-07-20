@@ -3,7 +3,7 @@ analogWrite: pin value: value
 	"Sends a PWM value to a digital pin. 0 - 255
 	if necessary use extended analog rite"
 	| analogWriteBuffer |
-	(pin > 15) ifTrue: [^self  extendedAnalogWrite: pin value: value ].
+	(pin > 15) ifTrue: [^self  extendedAnalogWrite: pin value: value rounded].
 	analogWriteBuffer := ByteArray new: 3 withAll: 0.
 	analogWriteBuffer
 		at: 1
