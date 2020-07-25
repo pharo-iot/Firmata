@@ -6,7 +6,7 @@ stepperConfig: devnumber delay: museconds interface: code stepsPerRev: number pi
 	stepsPerRev(olution)
 	pins: a ByeArray of 2 or 4 pin numbers (0-127)"
 	| request |
-	request := ByteArray new: 6.
+	request := ByteArray new: 7.
 	request
 		at: 1 put: FirmataConstants startSysex;
 		at: 2 put: FirmataConstants stepperCommand;
