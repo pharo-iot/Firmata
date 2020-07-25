@@ -13,5 +13,5 @@ attachEncoder: number pinA: pinNumber1 pinB: pinNumber2
 		at: 6 put: pinNumber2;
 		at: 7 put: FirmataConstants endSysex .
 								
-	port nextPutAll: request.
+	self port nextPutAll: request.
 	encoderData at: number put: 0.
