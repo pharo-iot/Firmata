@@ -19,5 +19,6 @@ initializeVariables
 			(FirmataConstants pinStateResponse -> #processPinState: ).
 			(FirmataConstants stringData -> #processStringData: ).
 			(FirmataConstants i2cReply -> #processI2CData: ).
-			(FirmataConstants encoderData -> #processEncoderData:)
+			(FirmataConstants encoderData -> #processEncoderData:).
+			(FirmataConstants stepperCommand -> #processStepperEvent: )
 			 } asDictionary 
