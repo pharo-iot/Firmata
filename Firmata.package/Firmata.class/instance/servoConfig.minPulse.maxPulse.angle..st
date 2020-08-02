@@ -1,6 +1,7 @@
 servos
 servoConfig: pin minPulse: minPulse maxPulse: maxPulse angle: angle
-	"Default values: 
+	"Note: the parameter angle is ignored by Firmata, so considerr this method deprecated
+	Default values: 
 	minPulse 544 (LSB 32 MSB 4)
 	maxPulse 2400 (LSB 96 MSB 18
 	"

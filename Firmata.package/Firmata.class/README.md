@@ -22,3 +22,5 @@ firmata digitalWrite: 13 value: 0.
 firmata digitalWrite: 13 value: 1.
 
 firmata disconnect.
+
+Note that allPins numbers firmata pins the smalltalk way, zo allPins at: 1 denotes arduino pin 0!

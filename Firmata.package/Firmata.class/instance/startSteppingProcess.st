@@ -4,4 +4,4 @@ startSteppingProcess
 		ifTrue: [^ self].
 	steppingProcess := [[self step.
 			(Delay forMilliseconds: self stepTime) wait] repeat]
-				forkNamed: self asString 
+				forkAt: Processor lowIOPriority  named: self asString 

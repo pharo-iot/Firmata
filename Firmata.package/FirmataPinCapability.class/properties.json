@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Firmata",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mode",
+		"resolution"
+	],
+	"name" : "FirmataPinCapability",
+	"type" : "normal"
+}

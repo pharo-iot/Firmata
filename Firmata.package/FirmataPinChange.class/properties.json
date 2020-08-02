@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Announcement",
+	"category" : "Firmata",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pinNr",
+		"pinValue"
+	],
+	"name" : "FirmataPinChange",
+	"type" : "normal"
+}
