@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "RobvanLopik 9/4/2020 12:29",
+	"super" : "Object",
+	"category" : "Firmata",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"firmata",
+		"address",
+		"readDelay"
+	],
+	"name" : "I2CFirmataConnection",
+	"type" : "normal"
+}
