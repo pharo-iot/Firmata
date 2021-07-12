@@ -10,6 +10,6 @@
 		"address",
 		"readDelay"
 	],
-	"name" : "I2CFirmataConnection",
+	"name" : "FirmataI2CConnection",
 	"type" : "normal"
 }
