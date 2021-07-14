@@ -9,5 +9,8 @@ setDigitalInputs: portNumber data: portData
 		newValue := portData bitAt: bit.
 		dataGuard critical: [ (allPins at: pinNr) pinValue: newValue ].
 		[(oldValue ~= newValue) ifTrue: 
-			[ announcer announce: (FirmataPinChange new pinNr: (pinNr - 1); pinValue: newValue) ]] forkAt: Processor userInterruptPriority
+			[ announcer announce: (FirmataPinChange new 
+					pinNr: (pinNr - 1); 
+					pinValue: newValue);
+					timestamp: DateAndTime now ]] forkAt: Processor userInterruptPriority
 	]
