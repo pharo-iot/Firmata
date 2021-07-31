@@ -1,4 +1,4 @@
 accessing
 readWordAt: aRegister
 	"default read low byte first"
-	^self readWordAt: aRegister BigEndian: false
+	^self readWordAt: aRegister bigEndian: false

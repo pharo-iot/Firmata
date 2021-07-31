@@ -1,5 +1,5 @@
 i2c
-readWordAt: aRegister BigEndian: bool
+readWordAt: aRegister bigEndian: bool
 	"if BigEndian is true, the first byte read is the high byte"
 	| answer |
 	firmata i2cRead: address count: 2  register: aRegister .

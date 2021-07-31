@@ -1,5 +1,5 @@
 i2c
-writeWordAt: aRegister data: aWord BigEndian: bool
+writeWordAt: aRegister data: aWord bigEndian: bool
 	"if bool is true write the high byte first"
 	| packet |
 	bool ifTrue: [ packet := ByteArray with: aRegister with: (aWord // 256) with: (aWord bitAnd: 16rFF) ]
