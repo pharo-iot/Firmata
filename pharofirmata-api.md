@@ -239,6 +239,25 @@ A ByteArray can be written to the device with
 `arduino i2cWriteTo: anI2CAddress data: aByteArray`
 If a register is needed this must be the first byte of `anByteArray`.
 
+#### FirmataI2CConnection
+
+To make it easier to use the I2C capabilities you can use the class ```FirmataI2CConnection```, that is compatible with equivalent classes in the WiringPi, PiGPio and Picod drivers. You would have an instance of ```FirmataI2CConnection``` for each device on the I2C bus, identified by its bus address.
+
+You start with:
+
+```smalltalk
+i2cDevice := arduino openI2C: 16r67.  "open device with address 16r67"
+```
+
+Examples of usage:
+
+```smalltalk
+value := i2cDevice read8BitsAt: 5. "read a byte from register 5"
+i2cDevice writeWordAt: 5 data: 16ra0c5. "Write value to register 5, lower byte (16rc5) first"
+i2cDevice writeWordAt: 5 data: 16ra0c5 bigEndian: true. "the same but now the high order byte is sent first"
+i2cDevice writeByte: 4. "Simply write 4, without register, for a device like the PCF8574 8-bits port extender"
+```
+
 ### One-Wire
 
 to be done
