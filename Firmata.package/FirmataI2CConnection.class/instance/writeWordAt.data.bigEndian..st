@@ -5,5 +5,5 @@ writeWordAt: aRegister data: aWord bigEndian: bool
 	bool ifTrue: [ packet := ByteArray with: aRegister with: (aWord // 256) with: (aWord bitAnd: 16rFF) ]
 		ifFalse: [ packet := ByteArray with: aRegister with: (aWord bitAnd: 16rFF) with: (aWord // 256) ].
 
-	firmata i2cWriteTo:  address data: packet 
+	firmata i2cWriteTo:  address data: packet .
 	readDelay wait. "To be sure the write takes effect"
