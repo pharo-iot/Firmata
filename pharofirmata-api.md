@@ -59,12 +59,12 @@ The instance ```arduino``` now contains a collection of ```FirmataPin```’s. Ea
 
 At present two announcements are implemented:
 
-- `FirmataPinChange` this it triggered when a digital input pin changes state. It has the methods `#pinNr`and`#pinValue`to indicate which pin changed and to what value.
+- `FirmataPinChange` this is triggered when a digital input pin changes state. It has the methods `#pinNr`and`#pinValue`to indicate which pin changed and to what value.
 - `FirmataStepperFinished` which signals the completion of a (legacy) stepper move, with the method `#stepperNr` indicating which stepper finished moving.
 
 You subscribe to an announcement with:
 `subscription := arduino when: AnAnnouncementClass do: aBlock`or
-`subscription := arduino when: AnAnnounceentClass send: aSelector to: anObject`
+`subscription := arduino when: AnAnnouncementClass send: aSelector to: anObject`
 
 You can cancel a subscription with:
 `arduino removeSubscription: aSubscription`
