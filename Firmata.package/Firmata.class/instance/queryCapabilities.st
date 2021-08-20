@@ -1,4 +1,4 @@
-as yet unclassified
+other commands
 queryCapabilities
 	"sends the capabilities query"
 	|request |

@@ -1,4 +1,4 @@
-as yet unclassified
+other commands
 queryAnalogMapping
 	"sends the analog mapping query"
 	|request |

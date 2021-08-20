@@ -11,6 +11,6 @@ setDigitalInputs: portNumber data: portData
 		[(oldValue ~= newValue) ifTrue: 
 			[ announcer announce: (FirmataPinChange new 
 					pinNr: (pinNr - 1); 
-					pinValue: newValue);
-					timestamp: DateAndTime now ]] forkAt: Processor userInterruptPriority
+					pinValue: newValue;
+					timestamp: DateAndTime now )]] forkAt: Processor userInterruptPriority
 	]
