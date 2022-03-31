@@ -1,4 +1,4 @@
-as yet unclassified
+analog pins
 firmataAnalogPinnr: anAnalogPinNumber
 	"creturn the FirmataPin with the corresponding arduino pin number
 	should this not be a copy??"	

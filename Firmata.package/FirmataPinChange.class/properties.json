@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "RobvanLopik 7/17/2021 22:41",
 	"super" : "Announcement",
 	"category" : "Firmata",
 	"classinstvars" : [ ],
@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"pinNr",
-		"pinValue"
+		"pinValue",
+		"timestamp"
 	],
 	"name" : "FirmataPinChange",
 	"type" : "normal"

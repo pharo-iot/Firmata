@@ -59,12 +59,12 @@ The instance ```arduino``` now contains a collection of ```FirmataPin```’s. Ea
 
 At present two announcements are implemented:
 
-- `FirmataPinChange` this it triggered when a digital input pin changes state. It has the methods `#pinNr`and`#pinValue`to indicate which pin changed and to what value.
+- `FirmataPinChange` this is triggered when a digital input pin changes state. It has the methods `#pinNr`and`#pinValue`to indicate which pin changed and to what value.
 - `FirmataStepperFinished` which signals the completion of a (legacy) stepper move, with the method `#stepperNr` indicating which stepper finished moving.
 
 You subscribe to an announcement with:
 `subscription := arduino when: AnAnnouncementClass do: aBlock`or
-`subscription := arduino when: AnAnnounceentClass send: aSelector to: anObject`
+`subscription := arduino when: AnAnnouncementClass send: aSelector to: anObject`
 
 You can cancel a subscription with:
 `arduino removeSubscription: aSubscription`
@@ -238,6 +238,25 @@ To stop continuous reading:
 A ByteArray can be written to the device with
 `arduino i2cWriteTo: anI2CAddress data: aByteArray`
 If a register is needed this must be the first byte of `anByteArray`.
+
+#### FirmataI2CConnection
+
+To make it easier to use the I2C capabilities you can use the class ```FirmataI2CConnection```, that is compatible with equivalent classes in the WiringPi, PiGPio and Picod drivers. You would have an instance of ```FirmataI2CConnection``` for each device on the I2C bus, identified by its bus address.
+
+You start with:
+
+```smalltalk
+i2cDevice := arduino openI2C: 16r67.  "open device with address 16r67"
+```
+
+Examples of usage:
+
+```smalltalk
+value := i2cDevice read8BitsAt: 5. "read a byte from register 5"
+i2cDevice writeWordAt: 5 data: 16ra0c5. "Write value to register 5, lower byte (16rc5) first"
+i2cDevice writeWordAt: 5 data: 16ra0c5 bigEndian: true. "the same but now the high order byte is sent first"
+i2cDevice writeByte: 4. "Simply write 4, without register, for a device like the PCF8574 8-bits port extender"
+```
 
 ### One-Wire
 
